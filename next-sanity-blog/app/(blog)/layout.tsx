@@ -70,7 +70,6 @@ export default async function RootLayout({
     <html lang="en" className={`${inter.variable} bg-white text-black`}>
       <body>
         <section className="min-h-screen">
-          
           <AlertBanner />
           <main>{children}</main>
           <footer className="bg-accent-1 border-accent-2 border-t">
@@ -92,12 +91,6 @@ export default async function RootLayout({
                     >
                       Back to Home
                     </Link>
-                    {/* <a
-                      href="https://github.com/vercel/next.js/tree/canary/examples/cms-sanity"
-                      className="mx-3 font-bold hover:underline"
-                    >
-                      View on GitHub
-                    </a> */}
                   </div>
                 </div>
               )}
@@ -106,7 +99,7 @@ export default async function RootLayout({
         </section>
         {isDraftMode && <VisualEditing />}
         <SpeedInsights />
-        <CommentSec/>
+        <CommentSec />
       </body>
     </html>
   );

@@ -6,7 +6,7 @@ const CommentSec = () => {
   const [username, setUsername] = useState('');
   const [comment, setComment] = useState('');
 
-  // Load comments from localStorage on component mount
+  // Load comments from localStorage 
   useEffect(() => {
     const savedComments = localStorage.getItem('comments');
     if (savedComments) {
@@ -14,7 +14,7 @@ const CommentSec = () => {
     }
   }, []);
 
-  // Save comments to localStorage whenever the comments state changes
+  // Save comments to localStorage 
   useEffect(() => {
     if (comments.length > 0) {
       localStorage.setItem('comments', JSON.stringify(comments));
